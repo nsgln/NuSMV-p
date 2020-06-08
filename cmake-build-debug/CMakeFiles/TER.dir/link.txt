@@ -1,0 +1,2 @@
+/usr/bin/ar qc libTER.a  CMakeFiles/TER.dir/library.c.o
+/usr/bin/ranlib libTER.a
