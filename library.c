@@ -2,8 +2,17 @@
 #include "NuSMV-2.6.0/NuSMV/code/nusmv/core/dd/DDMgr.h"
 #include "NuSMV-2.6.0/NuSMV/code/nusmv/core/utils/array.h"
 #include "NuSMV-2.6.0/NuSMV/code/nusmv/core/utils/defs.h"
+#include "NuSMV-2.6.0/NuSMV/code/nusmv/core/cinit/cinitData.c"
 
 #include <stdio.h>
+
+/**
+ * Initialization of NuSMV
+ */
+void init_NuSMV(void){
+   NuSMVCore_init_data();
+   //NuSMVCore_init();
+}
 
 int computeAndWritePrimes(DDMgr_ptr dd, bdd_ptr b, const char* pathToTheFile){
     array_t * primes = bdd_compute_primes(dd, b);
